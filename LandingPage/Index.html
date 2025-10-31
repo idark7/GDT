@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great D'tour</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-+sZrS9Dhq3P7vLwP6F6FWi+gVKqV1ydD6Upkuh+YwC+zIv9s0dpx6k62dGcD1PppdzqMK7i7nwWeirdhN28ibw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary: #f7931e;
+            --text-light: #f5f7fa;
+            --text-muted: rgba(245, 247, 250, 0.75);
+            --border: rgba(255, 255, 255, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            color: var(--text-light);
+            background-color: #0c1a23;
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-image:
+                linear-gradient(rgba(5, 24, 33, 0.65), rgba(5, 24, 33, 0.8)),
+                url("https://images.unsplash.com/photo-1458538977777-0549b2370168?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .brand {
+            letter-spacing: 0.6rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand__mark {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: #1b1b1b;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 6px;
+        }
+
+        .hero__content {
+            max-width: 780px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .hero__title {
+            margin: 0;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            letter-spacing: 0.6rem;
+            font-weight: 600;
+        }
+
+        .hero__divider {
+            width: 180px;
+            height: 2px;
+            background-color: var(--border);
+            margin: 0 auto 16px;
+        }
+
+        .hero__tagline {
+            margin: 0;
+            font-size: 1rem;
+            letter-spacing: 0.35rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .hero__actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 999px;
+            border: 2px solid transparent;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn--primary {
+            background-color: var(--primary);
+            color: #1b1b1b;
+        }
+
+        .btn--primary:hover {
+            background-color: #ff9f2f;
+        }
+
+        .btn--outline {
+            border-color: var(--border);
+            color: var(--text-light);
+        }
+
+        .btn--outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.45);
+        }
+
+        .hero__footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .hero__follow {
+            font-size: 0.95rem;
+            letter-spacing: 0.35rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .social-list {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-list a {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .social-list a:hover {
+            color: var(--primary);
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 32px 18px;
+            }
+
+            .brand {
+                letter-spacing: 0.3rem;
+                font-size: 1rem;
+            }
+
+            .hero__title {
+                letter-spacing: 0.35rem;
+            }
+
+            .hero__tagline {
+                letter-spacing: 0.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <span class="brand">
+                GREAT
+                <span class="brand__mark">D</span>
+                TOUR
+            </span>
+        </header>
+
+        <main class="hero__content">
+            <h1 class="hero__title">YOUR NEXT EXPERIENCE AWAITS</h1>
+            <div class="hero__divider"></div>
+            <p class="hero__tagline">Learn . Heal . Explore . Travel Deeper Than The Destination</p>
+
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="#contact">Contact Us</a>
+                <a class="btn btn--outline" href="#about">About Us</a>
+            </div>
+        </main>
+
+        <footer class="hero__footer">
+            <span class="hero__follow">Follow Us</span>
+            <ul class="social-list" aria-label="Social media links">
+                <li><a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+            <span class="footer-note">© 2025 Great D'tour. All Rights Reserved.</span>
+        </footer>
+    </section>
+</body>
+</html>
+
